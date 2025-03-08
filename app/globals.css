@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.sidebar-bg {
+    background-image: url('/images/head.svg');
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
