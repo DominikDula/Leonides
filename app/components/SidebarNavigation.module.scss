@@ -1,0 +1,154 @@
+
+$border-thick: 3px;
+$hover-border-thick: 2px;
+$circle-padding: 10px;
+
+.sidebar__background {
+  background: var(--background);
+  background-image: url('/images/head.svg');
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.menu__circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+
+  &:hover {
+    .menu__circle-number {
+      color: var(--main-color-hover);
+    }
+
+    .menu__circle-divider {
+      background: linear-gradient(
+        to right,
+        var(--main-color-hover) 50%,
+        rgba(0, 0, 0, 0.1) 50%
+      );
+    }
+
+    .menu__circle-description {
+      color: var(--main-color-hover);
+    }
+
+    .menu__circle-animation {
+      animation: rotateAroundAxis 2s linear;
+      border: 1px dotted var(--main-color-hover);
+    }
+
+  }
+}
+
+.menu__circle-image {
+  position: relative;
+  border-radius: 50%;
+  padding: $circle-padding;
+
+  img {
+    position: relative;
+    top: 4%;
+    left: -11%;
+    width: 100%;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      filter: grayscale(0%);
+    }
+    .menu__circle-animation {
+      animation: rotateAroundAxis 2s linear;
+      border: 1px dotted var(--main-color-hover);
+    }
+    &::before {
+      border: $border-thick solid var(--main-color-hover);
+    }
+
+    &::after {
+      border: $hover-border-thick solid var(--main-color-hover);
+    }
+  }
+
+}
+
+@mixin circle-border($border-thick, $border-color) {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: $border-thick solid $border-color;
+}
+
+.menu__circle-image::before,
+.menu__circle-image::after {
+  @include circle-border(3px, var(--main-color));
+  width: 78%;
+  height: 78%;
+  top: 16%;
+}
+
+.menu__circle-image::before {
+  left: 11%;
+  z-index: 1;
+}
+
+.menu__circle-image::after {
+  left: 4%;
+  z-index: -1;
+}
+
+.menu__circle-animation {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  border: 1px dotted var(--main-color);
+  top: 8%;
+  left: 0%;
+  z-index: 2;
+  transform-origin: center;
+}
+
+.menu__circle-number {
+  color: var(--main-color);
+}
+
+.menu__circle-divider {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 50%,
+    rgba(0, 0, 0, 0.1) 50%
+  );
+}
+
+.menu__circle-description {
+  font-size: 0.8rem;
+}
+
+@keyframes rotateAroundAxis {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg) translateX(2px);
+  }
+  50% {
+    transform: rotate(180deg) translateY(2px);
+  }
+  75% {
+    transform: rotate(270deg) translateX(-2px);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0);
+  }
+}
