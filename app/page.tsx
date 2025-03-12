@@ -1,5 +1,6 @@
 import SidebarNavigation from '@/app/components/SidebarNavigation';
 import About from '@/app/components/About';
+import GridSection from '@/app/components/GridSection';
 import Image from 'next/image';
 import Link from "next/link";
 
@@ -19,6 +20,7 @@ export default function Home() {
         </Link>
       </div>
       <About/>
+      <GridSection/>
     </div>
   );
 }

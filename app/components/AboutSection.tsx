@@ -24,7 +24,7 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="max-w-5xl mx-auto mt-8 p-4">
+    <section className="max-w-3xl mx-auto mt-8 p-4">
       {data.map((section, index) => (
         <div key={index} className={`mb-8 ${styles[section.className] || ''}`}>
           <h2 className="text-2xl text-main">{section.title}</h2>

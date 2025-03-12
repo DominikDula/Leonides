@@ -64,7 +64,7 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      <section className={`${styles['about__cards']} max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8`}>
+      <section className={`${styles['about__cards']} max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8`}>
         {cardData.map((card, index) => (
           <motion.div
             key={index}

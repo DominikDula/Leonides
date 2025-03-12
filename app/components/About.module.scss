@@ -34,16 +34,16 @@
 
     &:hover {
       .about__card-title {
-        color: var(--main-color-hover);
+        color: rgba(var(--main-color-hover));
       }
 
       .about__card-divider {
-        background: var(--main-color-hover);
+        background: rgba(var(--main-color-hover));
       }
 
       .about__card-image {
         &::after {
-          border-right: 30px solid var(--main-color-hover);
+          border-right: 30px solid rgba(var(--main-color-hover));
         }
 
         img {
@@ -67,8 +67,8 @@
 
   .about__card-image {
     position: relative;
-    height: 300px;
-    width: 200px;
+    max-width: 250px;
+    max-height: 400px;
     transition: all 0.3s ease;
 
     img {
