@@ -1,0 +1,43 @@
+{
+  "sections": [
+    {
+      "title": "INŠPIROVANÝ HISTÓRIOU",
+      "content": [
+        "Staroveké Grécko, označované ako kolíska Európskej civilizácie. Najpokrokovejším objavom je **Demokracia**, o ktorú sa usilujú všetky súčasné štátne zriadenia. Veľkým gréckym zázrakom je vznik **filozofie**. Diela starovekých Grécky filozofov sú študnicou nevyčerpateľného poznania a inšpirácie. Boli položené základy dnešných disciplín ako fyzika, botanika, logika, rétorika a politické vedy.",
+        "Veľký rozmach v stavebnom umení prinieslo pokroky ako vodovod, kanalizácia, či kúpele. Grécka lyrika, divadlo, skloštvo a olympiáda. Toto všetko malo byť zničené jediným národom, jedným kráľom **Xerxesom, kráľom Perzskej ríše**. Mala to byť pomsta za porážku jeho otca spred desiatich rokov. Zhromaždil najväčšiu armádu tej doby s úmyslom podmaniť si celé Grécko."
+      ],
+      "className": ""
+    },
+    {
+      "title": "VÍZIA A POSLANIE LEONIDES",
+      "content": "Kráľ LEONIDAS sa svojou odvahou a vierou vzoprel otroctvu a tyranii Perzskej ríše, čím uchránil základné ľudské hodnoty ako je sloboda a demokracia. Svojím hrdinstvom ovplyvnil vývoj celej civilizácie až po dnes. Inšpirovaný históriou sme sa my v spoločnosti **LEONIDES - Transform your life** od svojho vzniku zaviazali, že naším poslaním bude pozitívne transformovať ľudské životy. Našim klientom prinášame transparentné informácie pod, pokrývajú finančného trhu, o ktorých sa otvorene nehovorí. Reálne riešenia, výhodné produkty a zodpovedný prístup. **Dávame šancu ľuďom**, ktorí chcú zmeniť svoj život k lepšiemu a získať ponuku obchodnej príležitosti a kompletný systém, ktorý ich privedie k úspechu.",
+      "className": ""
+    },
+    {
+      "title": "HODNOTY",
+      "content": [
+        "Transparentnosť",
+        "Etika",
+        "Odvaha",
+        "Viera",
+        "Líderstvo",
+        "Zvedavosť",
+        "Vzdelanie",
+        "Presvedčenie"
+      ],
+      "className": "about__section"
+    },
+    {
+      "title": "STABILITA A ZÁZEMIE SPOLOČNOSTI",
+      "content": [
+        "Vznik od roku 2009",
+        "Viac ako 10 ročná prax v odbore",
+        "Sme členom AFISP",
+        "Povolenie NBS PAG",
+        "Certifikát solventných firiem",
+        "Ocenený TOP externý partner za roky 2014 - 2015"
+      ],
+      "className": "about__section"
+    }
+  ]
+}

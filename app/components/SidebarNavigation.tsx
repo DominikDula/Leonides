@@ -1,12 +1,27 @@
-'use client'
+'use client';
 
-import styles from './SidebarNavigation.module.scss';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import styles from './SidebarNavigation.module.scss';
 
-export default function SidebarNavigation() {
-  const [isOpen, setIsOpen] = useState(true);
+interface MenuItem {
+  image: string;
+  number: string;
+  title: string;
+}
+
+const menuItems: MenuItem[] = [
+  { image: '/assets/menu/menu-01.jpg', number: '01', title: 'O SPOLOČNOSTI' },
+  { image: '/assets/menu/menu-02.jpg', number: '02', title: 'ČO PONÚKA LEONIDES?' },
+  { image: '/assets/menu/menu-03.jpg', number: '03', title: 'POTREBY ĽUDÍ' },
+  { image: '/assets/menu/menu-04.jpg', number: '04', title: 'ZMEŇ SVOJ ŽIVOT' },
+  { image: '/assets/menu/menu-05.jpg', number: '05', title: 'PARTNERI' },
+  { image: '/assets/menu/menu-06.jpg', number: '06', title: 'KONTAKT' },
+];
+
+const SidebarNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const sidebarVariants = {
     open: { x: 0, opacity: 1 },
@@ -18,17 +33,8 @@ export default function SidebarNavigation() {
     closed: { y: 0 },
   };
 
-  const menuItems = [
-    { image: '/assets/menu/menu-01.jpg', number: '01', title: 'O SPOLOČNOSTI' },
-    { image: '/assets/menu/menu-02.jpg', number: '02', title: 'ČO PONÚKA LEONIDES?' },
-    { image: '/assets/menu/menu-03.jpg', number: '03', title: 'POTREBY ĽUDÍ' },
-    { image: '/assets/menu/menu-04.jpg', number: '04', title: 'ZMEŇ SVOJ ŽIVOT' },
-    { image: '/assets/menu/menu-05.jpg', number: '05', title: 'PARTNERI' },
-    { image: '/assets/menu/menu-06.jpg', number: '06', title: 'KONTAKT' },
-  ];
-
   return (
-    <div className="relative">
+    <div className="relative flex justify-center">
       <motion.button
         className="fixed top-4 p-2 z-50"
         onClick={() => setIsOpen(true)}
@@ -91,4 +97,6 @@ export default function SidebarNavigation() {
       </motion.div>
     </div>
   );
-}
+};
+
+export default SidebarNavigation;

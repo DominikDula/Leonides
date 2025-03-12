@@ -1,7 +1,4 @@
-
 $border-thick: 3px;
-$hover-border-thick: 2px;
-$circle-padding: 10px;
 
 .sidebar__background {
   background: var(--background);
@@ -48,7 +45,7 @@ $circle-padding: 10px;
 .menu__circle-image {
   position: relative;
   border-radius: 50%;
-  padding: $circle-padding;
+  padding: 10px;
 
   img {
     position: relative;
@@ -73,7 +70,7 @@ $circle-padding: 10px;
     }
 
     &::after {
-      border: $hover-border-thick solid var(--main-color-hover);
+      border: 2px solid var(--main-color-hover);
     }
   }
 
