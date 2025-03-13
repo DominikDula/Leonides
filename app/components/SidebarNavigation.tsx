@@ -20,7 +20,7 @@ const menuItems: MenuItem[] = [
   { image: '/assets/menu/menu-06.jpg', number: '06', title: 'KONTAKT' },
 ];
 
-const SidebarNavigation: React.FC = () => {
+const SidebarNavigation= () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const sidebarVariants = {

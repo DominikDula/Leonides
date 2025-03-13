@@ -1,3 +1,4 @@
+@import 'animations.module';
 $border-thick: 3px;
 
 .sidebar__background {
@@ -19,24 +20,24 @@ $border-thick: 3px;
 
   &:hover {
     .menu__circle-number {
-      color: var(--main-color-hover);
+      color: rgba(var(--main-color-hover));
     }
 
     .menu__circle-divider {
       background: linear-gradient(
         to right,
-        var(--main-color-hover) 50%,
+        rgba(var(--main-color-hover)) 50%,
         rgba(0, 0, 0, 0.1) 50%
       );
     }
 
     .menu__circle-description {
-      color: var(--main-color-hover);
+      color: rgba(var(--main-color-hover));
     }
 
     .menu__circle-animation {
       animation: rotateAroundAxis 2s linear;
-      border: 1px dotted var(--main-color-hover);
+      border: 1px dotted rgba(var(--main-color-hover));
     }
 
   }
@@ -63,14 +64,14 @@ $border-thick: 3px;
     }
     .menu__circle-animation {
       animation: rotateAroundAxis 2s linear;
-      border: 1px dotted var(--main-color-hover);
+      border: 1px dotted rgba(var(--main-color-hover));
     }
     &::before {
-      border: $border-thick solid var(--main-color-hover);
+      border: $border-thick solid rgba(var(--main-color-hover));
     }
 
     &::after {
-      border: 2px solid var(--main-color-hover);
+      border: 2px solid rgba(var(--main-color-hover));
     }
   }
 
@@ -130,22 +131,4 @@ $border-thick: 3px;
 
 .menu__circle-description {
   font-size: 0.8rem;
-}
-
-@keyframes rotateAroundAxis {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(90deg) translateX(2px);
-  }
-  50% {
-    transform: rotate(180deg) translateY(2px);
-  }
-  75% {
-    transform: rotate(270deg) translateX(-2px);
-  }
-  100% {
-    transform: rotate(360deg) translateY(0);
-  }
 }

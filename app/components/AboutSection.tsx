@@ -2,7 +2,6 @@
 
 import React, { JSX } from 'react';
 import styles from './About.module.scss';
-import aboutData from '../../public/aboutData.json';
 
 interface Section {
   title: string;
@@ -10,9 +9,13 @@ interface Section {
   className: string;
 }
 
-const AboutSection: React.FC = () => {
-  const data: Section[] = aboutData.sections;
+interface AboutSectionProps {
+  aboutData: {
+    sections: Section[];
+  };
+}
 
+const AboutSection = ({ aboutData }: AboutSectionProps) => {
   const formatText = (text: string): (string | JSX.Element)[] => {
     const parts = text.split(/(\*\*.*?\*\*)/g);
     return parts.map((part, idx) => {
@@ -25,7 +28,7 @@ const AboutSection: React.FC = () => {
 
   return (
     <section className="max-w-3xl mx-auto mt-8 p-4">
-      {data.map((section, index) => (
+      {aboutData.sections.map((section, index) => (
         <div key={index} className={`mb-8 ${styles[section.className] || ''}`}>
           <h2 className="text-2xl text-main">{section.title}</h2>
           <div className={`${styles['about__card-divider']} my-2`}></div>

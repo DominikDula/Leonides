@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import styles from './About.module.scss';
 import Image from 'next/image';
+import styles from './About.module.scss';
 import { motion } from 'framer-motion';
 import AboutSection from '@/app/components/AboutSection';
 
@@ -11,6 +11,16 @@ interface CardData {
   title2: string;
   imageSrc: string;
   altText: string;
+}
+
+interface AboutProps {
+  aboutData: {
+    sections: {
+      title: string;
+      content: string | string[];
+      className: string;
+    }[];
+  };
 }
 
 const cardData: CardData[] = [
@@ -47,7 +57,7 @@ const cardVariants = {
   }),
 };
 
-const About: React.FC = () => {
+const About = ({ aboutData }: AboutProps) => {
   return (
     <div className={`${styles['about']} flex justify-center flex-col w-full p-8 pb-[15rem]`}>
       <div className={`${styles['about__info']} flex flex-col items-center justify-center max-w-full md:max-w-md mx-auto w-full py-[5rem] md:p-[5rem] mt-[15rem]`}>
@@ -91,7 +101,7 @@ const About: React.FC = () => {
           </motion.div>
         ))}
       </section>
-      <AboutSection />
+      <AboutSection aboutData={aboutData} />
     </div>
   );
 };
