@@ -1,4 +1,4 @@
-@import 'animations.module';
+@import '../animations.module';
 $border-thick: 3px;
 
 .sidebar__background {
@@ -8,6 +8,7 @@ $border-thick: 3px;
   background-position: left;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  z-index: 10;
 }
 
 .menu__circle {

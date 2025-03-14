@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './PeopleNeeds.module.scss';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import AboutSection from '@/app/components/AboutSection';
+import AboutSection from '@/app/components/about/AboutSection';
 
 interface CardData {
   title: string;
